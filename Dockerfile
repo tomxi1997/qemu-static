@@ -37,8 +37,8 @@ RUN git clone https://gitlab.freedesktop.org/slirp/libslirp.git /tmp/libslirp &&
 
  # required to compile libusb as static lib
 RUN git clone https://github.com/libusb/libusb.git /tmp/libusb && cd /tmp/libusb && \
- ./configure --with-pic --disable-udev --enable-static --disable-shared && make -j$(nproc) && make install && \
- rm -rf /tmp/libusb
+    ./configure --with-pic --disable-udev --enable-static --disable-shared && make -j$(nproc) && make install && \
+    rm -rf /tmp/libusb
  
 
 
