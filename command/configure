@@ -8,7 +8,18 @@ WORKDIR "/work/out/${QEMU_SRC_BASENAME}"
 RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --prefix="/work/dst/${QEMU_ARTIFACT_BASENAME}" \
     --disable-debug-info \
-    --disable-system \
     --disable-werror \
+    --enable-system \
     --enable-linux-user \
+    --target-list=x86_64-softmmu,x86_64-linux-user \
+    --enable-kvm \
+    --enable-virtfs \
+    --enable-qcow1 \
+    --enable-vmdk \
+    --enable-slirp \
+    --enable-sdl \
+    --enable-libusb \
+    --enable-cap-ng \                                                                                                               
+    --enable-strip \
+    --enable-lto \
     --static
