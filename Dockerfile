@@ -39,7 +39,14 @@ RUN git clone https://gitlab.freedesktop.org/slirp/libslirp.git /tmp/libslirp &&
 RUN git clone https://github.com/libusb/libusb.git /tmp/libusb && cd /tmp/libusb && \
     ./configure --with-pic --disable-udev --enable-static --disable-shared && make -j$(nproc) && make install && \
     rm -rf /tmp/libusb
- 
+    
+ # required to compile libusbredir as static lib
+RUN git clone https://gitlab.freedesktop.org/usbredir/usbredir.git /tmp/usbredir && \
+    cd /tmp/usbredir && mkdir build && cd build \
+    meson setup --buildtype=release -Ddefault_library=static .. \
+    ninja && ninja install \
+    rm -rf /tmp/usbredir
+    
 
 
 # additional
