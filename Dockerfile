@@ -18,6 +18,24 @@ RUN apk add\
  flex\
  bison
 
+
+# required to compile Slirp as static lib and qemu-system
+RUN apk add\
+ util-linux-static\
+ bzip2-static ncurses-static\
+ libxkbcommon-static libxkbcommon-dev\
+ libslirp-dev\
+ sdl2-dev\
+ libx11-static gtk+3.0-dev zstd-static\
+ git meson ninja-build
+
+RUN git clone https://gitlab.freedesktop.org/slirp/libslirp.git /tmp/libslirp && \
+    cd /tmp/libslirp && \
+    meson setup --default-library static build && \
+    ninja -C build install && \
+    rm -rf /tmp/libslirp
+
+
 # additional
 RUN apk add bash xz git patch
 
