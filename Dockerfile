@@ -25,8 +25,7 @@ RUN apk add\
  bzip2-static ncurses-static\
  libxkbcommon-static libxkbcommon-dev\
  libslirp-dev libx11-static zstd-static\
- git meson ninja-build gettext-static\ 
- libjpeg-turbo-static cyrus-sasl-static\
+ git meson ninja-build gettext-static libjpeg-turbo-static cyrus-sasl-static\
  build-base liburing-dev libaio-dev alpine-sdk\
  libsndfile-static libsndfile-dev openssl-libs-static\
  lz4-static pixman-static pixman-dev
