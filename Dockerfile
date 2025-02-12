@@ -16,7 +16,7 @@ RUN apk add\
  glib-dev glib-static\
  zlib-dev zlib-static\
  flex\
- bison
+ bison bash xz git patch wget 
 
 
 # required to compile Slirp as static lib and qemu-system
@@ -24,33 +24,17 @@ RUN apk add\
  util-linux-static\
  bzip2-static ncurses-static\
  libxkbcommon-static libxkbcommon-dev\
- libslirp-dev\
- sdl2-dev\
- libx11-static gtk+3.0-dev zstd-static\
- git meson ninja-build
+ libslirp-dev libx11-static zstd-static\
+ git meson ninja-build gettext-static\ 
+ libjpeg-turbo-static cyrus-sasl-static\
+ build-base liburing-dev libaio-dev alpine-sdk\
+ libsndfile-static libsndfile-dev openssl-libs-static\
+ lz4-static pixman-static pixman-dev
+ 
 
-RUN git clone https://gitlab.freedesktop.org/slirp/libslirp.git /tmp/libslirp && \
-    cd /tmp/libslirp && \
-    meson setup --default-library static build && \
-    ninja -C build install && \
-    rm -rf /tmp/libslirp
-
- # required to compile libusb as static lib
-RUN git clone https://github.com/libusb/libusb.git /tmp/libusb && cd /tmp/libusb && \
-    ./configure --with-pic --disable-udev --enable-static --disable-shared && make -j$(nproc) && make install && \
-    rm -rf /tmp/libusb
-    
- # required to compile libusbredir as static lib
-RUN git clone https://gitlab.freedesktop.org/usbredir/usbredir.git /tmp/usbredir && \
-    cd /tmp/usbredir && mkdir build && cd build \
-    meson setup --buildtype=release -Ddefault_library=static .. \
-    ninja && ninja install \
-    rm -rf /tmp/usbredir
-    
 
 
 # additional
-RUN apk add bash xz git patch
 
 WORKDIR /work
 
