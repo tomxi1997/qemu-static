@@ -24,6 +24,8 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-vnc \
     --enable-sdl \
     --enable-sdl-image \
+    --enable-linux-aio \
+    --enable-linux-io-uring \
     --enable-pixman \
     --enable-vvfat \
     --enable-zstd \
