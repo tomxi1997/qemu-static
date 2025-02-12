@@ -17,8 +17,7 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-qcow1 \
     --enable-vmdk \
     --enable-slirp \
-    --enable-libusb \
-    --enable-cap-ng \                                                                                                               
+    --enable-libusb \                                                                                                               
     --enable-strip \
     --enable-lto \
     --static
