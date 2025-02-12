@@ -7,7 +7,7 @@ mkdir -p $WORKSPACE
 cd $WORKSPACE
 wget https://github.com/tomxi1997/qemu-static/releases/download/v1/libslirp-master.tar.gz
 tar -xf libslirp-master.tar.gz
-cd libslirp-maste
+cd libslirp-master
 meson setup --default-library static build 
 ninja -C build install 
 
