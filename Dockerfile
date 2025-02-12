@@ -16,7 +16,7 @@ RUN apk add\
  glib-dev glib-static\
  zlib-dev zlib-static\
  flex\
- bison bash xz git patch wget 
+ bison bash xz git patch wget cmake
 
 
 # required to compile Slirp as static lib and qemu-system
