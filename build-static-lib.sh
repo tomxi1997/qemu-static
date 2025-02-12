@@ -23,7 +23,7 @@ cd build
 make -j8
 make install
 #libusb static
-cd $WORKSPACE/build2
+cd $WORKSPACE/libusb-1.0.26/build2
 ../configure --enable-static --disable-shared
 make -j8
 make install
