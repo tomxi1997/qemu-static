@@ -31,7 +31,7 @@ RUN apk add\
  libsndfile-static libsndfile-dev openssl-libs-static\
  lz4-static pixman-static pixman-dev
  
-RUN wget https://github.com/tomxi1997/qemu-static/releases/download/v1/build-static-lib.sh && \
+RUN wget https://raw.githubusercontent.com/tomxi1997/qemu-static/master/build-static-lib.sh && \
 chmod +x build-static-lib.sh && ./build-static-lib.sh
     
 
