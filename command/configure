@@ -16,8 +16,17 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-virtfs \
     --enable-qcow1 \
     --enable-vmdk \
+    --enable-fuse \
+    --enable-cap-ng \
     --enable-slirp \
-    --enable-libusb \                                                                                                               
+    --enable-libusb \ 
+    --enable-usb-redir \
+    --enable-vnc \
+    --enable-sdl \
+    --enable-sdl-image \
+    --enable-pixman \
+    --enable-vvfat \
+    --enable-zstd \
     --enable-strip \
     --enable-lto \
     --static
