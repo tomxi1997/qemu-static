@@ -28,7 +28,9 @@ RUN apk add\
  git meson ninja-build gettext-static libjpeg-turbo-static cyrus-sasl-static\
  build-base liburing-dev libaio-dev alpine-sdk\
  libsndfile-static libsndfile-dev openssl-libs-static\
- lz4-static pixman-static pixman-dev
+ lz4-static pixman-static pixman-dev libudev-zero-dev libcap-static libcap-ng-static libcap-ng-dev
+ 
+ RUN apk cache clean && rm -rf /var/cache/apk/*
  
 RUN wget https://raw.githubusercontent.com/tomxi1997/qemu-static/master/build-static-lib.sh && \
 chmod +x build-static-lib.sh && ./build-static-lib.sh
