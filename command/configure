@@ -19,9 +19,7 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-fuse \
     --enable-cap-ng \
     --enable-slirp \
-    --enable-libusb \ 
-    --enable-vnc \
-    --enable-sdl \
+    --enable-libusb --enable-vnc --enable-sdl \
     --enable-sdl-image \
     --enable-linux-aio \
     --enable-linux-io-uring \
