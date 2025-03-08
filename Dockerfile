@@ -10,7 +10,7 @@ RUN apk add\
  perl\
  python3\
  gcc\
- libc-dev\
+ libc-dev\\
  pkgconf\
  linux-headers\
  glib-dev glib-static\
@@ -27,7 +27,7 @@ RUN apk add\
  libslirp-dev libx11-static zstd-static\
  git meson ninja-build gettext-static libjpeg-turbo-static cyrus-sasl-static\
  build-base liburing-dev libaio-dev alpine-sdk\
- libsndfile-static libsndfile-dev openssl-libs-static\
+ libsndfile-static libsndfile-dev openssl-libs-static zstd-dev zstd-static\
  lz4-static pixman-static pixman-dev libudev-zero-dev libcap-static libcap-ng-static libcap-ng-dev
  
  RUN apk cache clean && rm -rf /var/cache/apk/*
