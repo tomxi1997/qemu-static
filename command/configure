@@ -20,7 +20,6 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-cap-ng \
     --enable-slirp \
     --enable-libusb \ 
-    --enable-usb-redir \
     --enable-vnc \
     --enable-sdl \
     --enable-sdl-image \
