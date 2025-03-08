@@ -1,6 +1,12 @@
-#! /bin/bash
-#build some static lib only for qemu 9.2
-WORKSPACE= /tmp/workspace
+#!/bin/bash
+
+set -e
+
+. $(dirname $0)/base
+
+WORKDIR /work/src
+
+export WORKSPACE=/work/src/workspace
 mkdir -p $WORKSPACE
 
 #libslirp
@@ -65,7 +71,6 @@ ninja install
 
 
 
-
 #SDL2
 cd $WORKSPACE
 wget https://github.com/tomxi1997/qemu-static/releases/download/v1/SDL2-2.32.0.tar.gz
@@ -99,3 +104,4 @@ make -j8 && make install
 
 #clean
 rm -rf $WORKSPACE
+
