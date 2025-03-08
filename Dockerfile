@@ -10,7 +10,7 @@ RUN apk add\
  perl\
  python3\
  gcc\
- libc-dev\\
+ libc-dev\
  pkgconf\
  linux-headers\
  glib-dev glib-static\
