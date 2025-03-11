@@ -16,9 +16,10 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-fuse \
     --enable-cap-ng \
     --enable-slirp \
-    --enable-libusb --enalbe-usb-redir \
+    --enable-libusb \
     --enable-vnc --enable-vnc-jpeg --enable-png \
     --enable-sdl --enable-sdl-image \
+    --enable-fdt \
     --enable-linux-aio --enable-linux-io-uring \
     --enable-pixman \
     --enable-vvfat \
