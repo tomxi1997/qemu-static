@@ -22,7 +22,7 @@ ninja -C build install
 cd $WORKSPACE
 wget wget https://github.com/tomxi1997/qemu-static/releases/download/v1/libusb-1.0.27.tar.bz2
 tar -xf libusb-1.0.27.tar.bz2
-cd libusb-1.0.2
+cd libusb-1.0.27
 mkdir build
 ../configure --enable-static --disable-shared
 make -j8
@@ -30,8 +30,7 @@ make install
 
 #libusb-compat
 cd $WORKSPACE
-wget https://github.com/libusb/libusb-compat-0.1/releases/download/v0.1.8/l
-ibusb-compat-0.1.8.tar.bz2
+wget https://github.com/libusb/libusb-compat-0.1/releases/download/v0.1.8/libusb-compat-0.1.8.tar.bz2
 tar -xf libusb-compat-0.1.8.tar.bz2
 cd libusb-compat-0.1.8
 mkdir build 
