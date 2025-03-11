@@ -17,7 +17,7 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-cap-ng \
     --enable-slirp \
     --enable-libusb --enalbe-usb-redir \
-    --enable-vnc --enable-vnc-jpeg \
+    --enable-vnc --enable-vnc-jpeg --enable-png \
     --enable-sdl --enable-sdl-image \
     --enable-linux-aio --enable-linux-io-uring \
     --enable-pixman \
