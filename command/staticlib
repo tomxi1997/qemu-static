@@ -20,7 +20,7 @@ ninja -C build install
 
 #libusb
 cd $WORKSPACE
-wget wget https://github.com/tomxi1997/qemu-static/releases/download/v1/libusb-1.0.27.tar.bz2
+wget https://github.com/tomxi1997/qemu-static/releases/download/v1/libusb-1.0.27.tar.bz2
 tar -xf libusb-1.0.27.tar.bz2
 cd libusb-1.0.27
 mkdir build
