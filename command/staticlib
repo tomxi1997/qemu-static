@@ -23,8 +23,7 @@ cd $WORKSPACE
 wget https://github.com/tomxi1997/qemu-static/releases/download/v1/libusb-1.0.27.tar.bz2
 tar -xf libusb-1.0.27.tar.bz2
 cd libusb-1.0.27
-mkdir build
-../configure --enable-static --disable-shared
+./configure --enable-static --disable-shared
 make -j8
 make install
 
