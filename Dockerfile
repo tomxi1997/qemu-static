@@ -33,7 +33,7 @@ RUN apk add\
  
  RUN apk cache clean && rm -rf /var/cache/apk/*
  
-RUN wget https://raw.githubusercontent.com/tomxi1997/qemu-static/master/build-static-lib.sh && \
+RUN wget https://raw.githubusercontent.com/tomxi1997/qemu-static/bak/build-static-lib.sh && \
 chmod +x build-static-lib.sh && ./build-static-lib.sh
     
 
